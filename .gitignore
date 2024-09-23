@@ -1,3 +1,4 @@
 /OPEN_DATA_SPLIT
 /logs
 canadian_corps.db
+*.db-journal

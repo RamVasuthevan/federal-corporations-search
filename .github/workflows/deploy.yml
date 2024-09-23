@@ -26,8 +26,10 @@ jobs:
 
     - name: Download and process data
       run: |
-        wget https://ised-isde.canada.ca/cc/lgcy/download/OPEN_DATA_SPLIT.zip
-        unzip OPEN_DATA_SPLIT.zip
+        mkdir OPEN_DATA_SPLIT
+        wget -O OPEN_DATA_SPLIT/OPEN_DATA_SPLIT.zip https://ised-isde.canada.ca/cc/lgcy/download/OPEN_DATA_SPLIT.zip
+        unzip OPEN_DATA_SPLIT/OPEN_DATA_SPLIT.zip -d OPEN_DATA_SPLIT
+        rm OPEN_DATA_SPLIT/OPEN_DATA_SPLIT.zip
         pipenv install
         pipenv run python main.py
 

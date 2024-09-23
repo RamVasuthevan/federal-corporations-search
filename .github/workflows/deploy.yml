@@ -26,7 +26,7 @@ jobs:
 
     - name: Download and process data
       run: |
-        mkdir OPEN_DATA_SPLIT
+        mkdir -p OPEN_DATA_SPLIT
         wget -O OPEN_DATA_SPLIT/OPEN_DATA_SPLIT.zip https://ised-isde.canada.ca/cc/lgcy/download/OPEN_DATA_SPLIT.zip
         unzip OPEN_DATA_SPLIT/OPEN_DATA_SPLIT.zip -d OPEN_DATA_SPLIT
         rm OPEN_DATA_SPLIT/OPEN_DATA_SPLIT.zip
@@ -46,5 +46,7 @@ jobs:
       run: |
         rsync -avz -e "ssh -o StrictHostKeyChecking=no" \
           datasette/ ${USER}@${HOST}:/var/www/datasette/federal-corporations-search/
+        rsync -avz -e "ssh -o StrictHostKeyChecking=no" \
+          .digitalocean/run.bash ${USER}@${HOST}:/var/www/datasette/federal-corporations-search/
         ssh -o StrictHostKeyChecking=no ${USER}@${HOST} \
           'cd /var/www/datasette/federal-corporations-search && pipenv install && systemctl restart datasette-federal-corporations-search.service'

@@ -47,4 +47,4 @@ jobs:
         rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" \
           ./ ${USER}@${HOST}:/var/www/datasette/federal-corporations-search/
         ssh -o StrictHostKeyChecking=no ${USER}@${HOST} \
-          'cd /var/www/datasette/federal-corporations-search && pipenv install && chmod +x .digitalocean/run.bash && systemctl restart datasette-federal-corporations-search.service'
+          'cd /var/www/datasette/federal-corporations-search && pipenv install && chmod +x .digitalocean/run.sh && systemctl restart datasette-federal-corporations-search.service'

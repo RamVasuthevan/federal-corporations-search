@@ -1,0 +1,55 @@
+{
+    "_embedded": {
+        "directors": [
+            {
+                "firstName": "Michael",
+                "lastName": "Kravshik",
+                "serviceAddress": {
+                    "line1": "325 Front St. W.",
+                    "line2": "Suite 400",
+                    "city": "Toronto",
+                    "subdivisionCode": "ON",
+                    "subdivisionName": "Ontario",
+                    "postalCode": "M5V 2Y1",
+                    "countryCode": "CA",
+                    "countryName": "Canada"
+                },
+                "uuid": "a9ead0a1-cd36-4fd5-83d8-4284e22a425c"
+            },
+            {
+                "firstName": "Jean",
+                "lastName": "Desgagne",
+                "serviceAddress": {
+                    "line1": "325 Front St. W.",
+                    "line2": "Suite 400",
+                    "city": "Toronto",
+                    "subdivisionCode": "ON",
+                    "subdivisionName": "Ontario",
+                    "postalCode": "M5V 2Y1",
+                    "countryCode": "CA",
+                    "countryName": "Canada"
+                },
+                "uuid": "6ffafb53-4cf7-4f53-bca4-b74d90d712b0"
+            },
+            {
+                "firstName": "Adam",
+                "lastName": "Bercovici",
+                "serviceAddress": {
+                    "line1": "325 Front St. W., Suite 400",
+                    "city": "Toronto",
+                    "subdivisionCode": "ON",
+                    "subdivisionName": "Ontario",
+                    "postalCode": "M5V 2Y1",
+                    "countryCode": "CA",
+                    "countryName": "Canada"
+                },
+                "uuid": "04cffb10-0d57-4472-a4a0-25d7b3239c76"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "https://ised-isde.canada.ca/cc/api/v2/corporations/9657690/directors"
+        }
+    }
+}
